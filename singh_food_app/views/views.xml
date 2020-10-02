@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Records are the way that Odoo insert data to models using an xml templates. -->
+        <!-- Menu items are a type of view that Odoo uses to display drop-down menus on its main bar. -->
+
+
+
+
+        <!-- Categories menu action -->
+        <record id="categories_action" model="ir.actions.act_window">
+            <field name="name">Categories</field>
+            <field name="res_model">foodapp.categories</field>
+            <field name="view_mode">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- App root menu -->
+        <menuitem id="root_menu" name="Singh Food App"/>
+
+        <!-- Categories menu -->
+        <menuitem id="categories_menu" name="Categories" parent="root_menu" action="categories_action" />
+
+    </data>
+</odoo>
